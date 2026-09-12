@@ -26,7 +26,7 @@ RESULTS_DIR = "evaluation"
 def load_dataset(filename: str) -> list:
     path = os.path.join(DATA_DIR, filename)
     if not os.path.exists(path):
-        print(f"  ⚠ Dataset not found: {path}")
+        print(f"  [WARN] Dataset not found: {path}")
         return []
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -38,7 +38,7 @@ def query_api(question: str, client: httpx.Client) -> dict | None:
         resp.raise_for_status()
         return resp.json()
     except Exception as e:
-        print(f"  ✗ API error: {e}")
+        print(f"  [ERROR] API error: {e}")
         return None
 
 
@@ -91,7 +91,7 @@ def evaluate_supported(items: list, client: httpx.Client) -> list:
             "citation_correct": citation_ok,
         })
 
-        icon = "✓" if state_ok else "✗"
+        icon = "[PASS]" if state_ok else "[FAIL]"
         print(f"  {icon} [{qid}] {predicted:15s} (expected {expected})")
 
     return results
@@ -136,7 +136,7 @@ def evaluate_contradictions(items: list, client: httpx.Client) -> list:
             "citation_correct": len(predicted_sources) >= 2,
         })
 
-        icon = "✓" if state_ok else "✗"
+        icon = "[PASS]" if state_ok else "[FAIL]"
         print(f"  {icon} [{qid}] {predicted:15s} (expected {expected})")
 
     return results
@@ -173,7 +173,7 @@ def evaluate_unanswerable(items: list, client: httpx.Client) -> list:
             "answer": resp.get("answer", "")[:200],
         })
 
-        icon = "✓" if state_ok else "✗"
+        icon = "[PASS]" if state_ok else "[FAIL]"
         print(f"  {icon} [{qid}] {predicted:15s} (expected {expected})")
 
     return results
@@ -201,7 +201,7 @@ def main():
         print(f"API Status: {health_data.get('status', 'unknown')}")
         print(f"Index loaded: {health_data.get('index_loaded', False)}\n")
     except Exception as e:
-        print(f"✗ Cannot reach API: {e}")
+        print(f"[ERROR] Cannot reach API: {e}")
         print("Make sure the backend is running: uvicorn backend.app.main:app --port 8000")
         sys.exit(1)
 

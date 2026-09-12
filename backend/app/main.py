@@ -15,9 +15,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Support both /api/* and root /* for maximum compatibility with serverless rewrites
 app.include_router(router, prefix="/api")
+app.include_router(router)
 
-# Serve frontend static files in production
+# Serve frontend static files in production if frontend/dist exists
 FRONTEND_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "frontend", "dist")
 if os.path.isdir(FRONTEND_DIR):
     app.mount("/assets", StaticFiles(directory=os.path.join(FRONTEND_DIR, "assets")), name="assets")
@@ -25,7 +27,10 @@ if os.path.isdir(FRONTEND_DIR):
     @app.get("/{full_path:path}")
     async def serve_frontend(full_path: str):
         """Serve the React SPA for any non-API route."""
-        return FileResponse(os.path.join(FRONTEND_DIR, "index.html"))
+        index_file = os.path.join(FRONTEND_DIR, "index.html")
+        if os.path.exists(index_file):
+            return FileResponse(index_file)
+        return {"message": "RuleGuard API is running"}
 
 if __name__ == "__main__":
     import uvicorn
