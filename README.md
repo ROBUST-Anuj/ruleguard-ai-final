@@ -4,6 +4,14 @@
 
 RuleGuard is an explainable university-regulations question-answering system that correctly distinguishes between three states: the rulebook **supports** an answer, the rulebook **does not contain** an answer, or the rulebook **contradicts itself**.
 
+## Live Demo
+
+> **https://ruleguard-ai.onrender.com**
+>
+> The live demo runs the complete RuleGuard system — real corpus, real retrieval, real LLM analysis. No mocked responses.
+>
+> **Note:** The free-tier Render instance may take 30–60 seconds to wake up on first visit.
+
 ---
 
 ## Problem
