@@ -6,12 +6,11 @@ RuleGuard is an explainable university-regulations question-answering system tha
 
 ## Live Demo
 
-> **Live Deployment (Vercel):**
-> Deploy with one click on Vercel by importing the GitHub repository (`ROBUST-Anuj/ruleguard-ai-final`) and adding the environment variable `LLM_API_KEY`.
+> 🌐 **Public Live Demo:** **[https://ruleguard-ai-iota.vercel.app](https://ruleguard-ai-iota.vercel.app)**
 >
-> The live deployment runs the complete RuleGuard system on a single domain — serving the React single-page frontend from Vercel Edge CDN and executing the FastAPI hybrid retrieval and reasoning pipeline via Vercel Python serverless functions.
+> The live deployment runs the complete RuleGuard system on a single domain — serving the React single-page frontend and executing the FastAPI hybrid retrieval and reasoning pipeline via Vercel Python serverless functions.
 >
-> **Project Repository:** https://github.com/ROBUST-Anuj/ruleguard-ai-final
+> **GitHub Repository:** https://github.com/ROBUST-Anuj/ruleguard-ai-final
 
 ---
 
