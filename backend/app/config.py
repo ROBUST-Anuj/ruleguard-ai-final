@@ -3,7 +3,7 @@ from typing import Optional
 
 class Settings(BaseSettings):
     LLM_API_KEY: str = "sk-placeholder"
-    LLM_MODEL: str = "llama-3.3-70b-versatile"
+    LLM_MODEL: str = "openai/gpt-oss-120b"
     LLM_BASE_URL: Optional[str] = "https://api.groq.com/openai/v1"
     EMBEDDING_MODEL: str = "text-embedding-3-small"
     SEMANTIC_WEIGHT: float = 0.65
@@ -19,8 +19,8 @@ class Settings(BaseSettings):
         # Auto-detect Groq keys
         if self.LLM_API_KEY and self.LLM_API_KEY.startswith("gsk_"):
             self.LLM_BASE_URL = "https://api.groq.com/openai/v1"
-            if not self.LLM_MODEL or self.LLM_MODEL.startswith("gpt-"):
-                self.LLM_MODEL = "llama-3.3-70b-versatile"
+            if not self.LLM_MODEL or self.LLM_MODEL.startswith("llama-3.3") or self.LLM_MODEL.startswith("gpt-"):
+                self.LLM_MODEL = "openai/gpt-oss-120b"
         elif self.LLM_API_KEY and self.LLM_API_KEY.startswith("sk-") and not self.LLM_API_KEY.startswith("sk-placeholder"):
             # If OpenAI key provided and user hasn't explicitly set custom base URL
             if self.LLM_BASE_URL == "https://api.groq.com/openai/v1":
