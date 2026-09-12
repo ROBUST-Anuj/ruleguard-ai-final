@@ -1,0 +1,152 @@
+[
+  {
+    "id": "U01",
+    "question": "What happens if I miss the examination because I attended my cousin's wedding?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The corpus only covers medical emergencies, bereavement, and Institute-sponsored events as approved absence reasons. Family weddings are not mentioned."
+  },
+  {
+    "id": "U02",
+    "question": "Can I defer my semester examination because of a flight cancellation?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The corpus does not mention travel disruptions as grounds for examination deferral."
+  },
+  {
+    "id": "U03",
+    "question": "Is bereavement leave automatically accepted as an examination absence exemption?",
+    "expected_state": "NOT_FOUND",
+    "reason": "While bereavement is listed as an approved absence for attendance, there is no specific provision linking bereavement to examination rescheduling."
+  },
+  {
+    "id": "U04",
+    "question": "Can internship attendance substitute for classroom attendance?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The corpus mentions the Industry Internship Program exemption for attendance but does not cover internship attendance substituting for classroom attendance."
+  },
+  {
+    "id": "U05",
+    "question": "Can I pay my tuition fees through cryptocurrency?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The fee regulations list specific payment methods (online, demand draft, NEFT/RTGS, cash) but do not mention cryptocurrency."
+  },
+  {
+    "id": "U06",
+    "question": "Can a parent request a hostel room change on behalf of a student?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The hostel handbook describes room allocation and changes but does not address parental involvement in such requests."
+  },
+  {
+    "id": "U07",
+    "question": "Can attendance from another university be transferred to NIT?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The corpus does not mention credit or attendance transfer from other institutions."
+  },
+  {
+    "id": "U08",
+    "question": "Is attendance waived during campus placement interviews?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The corpus mentions attendance relaxation for NIT-sponsored events and the Industry Internship Program but does not specifically mention placement interviews."
+  },
+  {
+    "id": "U09",
+    "question": "Can scholarship eligibility be extended after graduation?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The scholarship policy covers enrolled students only and does not mention post-graduation eligibility."
+  },
+  {
+    "id": "U10",
+    "question": "Can a student appeal a hostel fine after paying it?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The hostel handbook mentions grievance redressal but does not address whether fines can be appealed or refunded after payment."
+  },
+  {
+    "id": "U11",
+    "question": "Is a second medical certificate accepted after the first one is rejected?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The medical exemption policy describes submission and verification but does not cover resubmission after rejection."
+  },
+  {
+    "id": "U12",
+    "question": "Can a student take online classes instead of attending in person to meet the attendance requirement?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The attendance policy defines attendance as physical presence and does not mention online/remote attendance."
+  },
+  {
+    "id": "U13",
+    "question": "What is the policy on auditing courses at NIT?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The corpus does not contain any provisions about course auditing."
+  },
+  {
+    "id": "U14",
+    "question": "Can a student switch from B.Tech to M.Tech without completing the undergraduate degree?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The corpus does not discuss integrated degree programs or switching between program levels."
+  },
+  {
+    "id": "U15",
+    "question": "Is there a provision for gap year or sabbatical for students?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The corpus mentions Medical Leave of Absence but does not cover voluntary gap years or sabbaticals."
+  },
+  {
+    "id": "U16",
+    "question": "Can a student bring a laptop to the examination hall?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The examination policy prohibits electronic devices but specifically mentions phones, smartwatches, and tablets. Laptops are not explicitly addressed."
+  },
+  {
+    "id": "U17",
+    "question": "What happens if the hostel mess food causes food poisoning?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The hostel handbook describes the mess facility but does not include liability or response procedures for food safety incidents."
+  },
+  {
+    "id": "U18",
+    "question": "Can a student work a part-time job while enrolled at NIT?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The corpus does not mention any policies regarding student employment or part-time work."
+  },
+  {
+    "id": "U19",
+    "question": "Is there a student health insurance plan provided by NIT?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The corpus mentions the NIT Health Centre but does not discuss health insurance coverage."
+  },
+  {
+    "id": "U20",
+    "question": "Can a student request to change their faculty advisor?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The corpus mentions faculty advisors but does not describe a process for changing them."
+  },
+  {
+    "id": "U21",
+    "question": "What is the policy on intellectual property for student research projects?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The corpus does not contain any provisions about intellectual property rights."
+  },
+  {
+    "id": "U22",
+    "question": "Can I get a refund on my hostel mess fees if I go home for a week?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The hostel handbook describes mess fees but does not mention refunds or rebates for temporary absence."
+  },
+  {
+    "id": "U23",
+    "question": "Is there a dress code for students on campus?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The corpus does not mention any dress code policy."
+  },
+  {
+    "id": "U24",
+    "question": "Can a student take courses at a partner university and transfer credits to NIT?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The corpus does not mention credit transfer from external institutions or partner university agreements."
+  },
+  {
+    "id": "U25",
+    "question": "What is NIT's policy on students who are arrested by the police?",
+    "expected_state": "NOT_FOUND",
+    "reason": "The disciplinary regulations mention reporting criminal misconduct to law enforcement but do not describe what happens if a student is arrested externally."
+  }
+]

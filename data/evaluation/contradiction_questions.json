@@ -1,0 +1,72 @@
+[
+  {
+    "id": "C01",
+    "question": "Can a student with 68% attendance and an approved medical certificate appear for the semester examination?",
+    "expected_state": "CONTRADICTION",
+    "expected_contradiction_id": "CON-001",
+    "expected_sources": ["attendance_policy.md#4.2", "medical_exemption_policy.md#3.1"]
+  },
+  {
+    "id": "C02",
+    "question": "If I have a medical exemption, can I take the exam with attendance below 75%?",
+    "expected_state": "CONTRADICTION",
+    "expected_contradiction_id": "CON-001",
+    "expected_sources": ["attendance_policy.md#4.2", "medical_exemption_policy.md#3.1"]
+  },
+  {
+    "id": "C03",
+    "question": "Does a medical certificate override the 75% attendance requirement for exams?",
+    "expected_state": "CONTRADICTION",
+    "expected_contradiction_id": "CON-001",
+    "expected_sources": ["attendance_policy.md#4.2", "medical_exemption_policy.md#3.1"]
+  },
+  {
+    "id": "C04",
+    "question": "If I haven't paid my tuition fee by September 16, will my course registration be cancelled?",
+    "expected_state": "CONTRADICTION",
+    "expected_contradiction_id": "CON-002",
+    "expected_sources": ["fee_regulations.md#2.1", "academic_regulations.md#6.3"]
+  },
+  {
+    "id": "C05",
+    "question": "Is there a grace period for paying semester fees after September 15?",
+    "expected_state": "CONTRADICTION",
+    "expected_contradiction_id": "CON-002",
+    "expected_sources": ["fee_regulations.md#2.1", "academic_regulations.md#6.3"]
+  },
+  {
+    "id": "C06",
+    "question": "Will I be deregistered if I pay my fees on September 18?",
+    "expected_state": "CONTRADICTION",
+    "expected_contradiction_id": "CON-002",
+    "expected_sources": ["fee_regulations.md#2.1", "academic_regulations.md#6.3"]
+  },
+  {
+    "id": "C07",
+    "question": "Can a student with a CGPA of 5.5 who failed the supplementary exam in a core course get a second supplementary attempt?",
+    "expected_state": "CONTRADICTION",
+    "expected_contradiction_id": "CON-003",
+    "expected_sources": ["examination_policy.md#7.1", "academic_regulations.md#5.4"]
+  },
+  {
+    "id": "C08",
+    "question": "How many supplementary examination attempts are allowed for a failed course?",
+    "expected_state": "CONTRADICTION",
+    "expected_contradiction_id": "CON-003",
+    "expected_sources": ["examination_policy.md#7.1", "academic_regulations.md#5.4"]
+  },
+  {
+    "id": "C09",
+    "question": "If I failed the supplementary exam in a mandatory course, can I take another supplementary?",
+    "expected_state": "CONTRADICTION",
+    "expected_contradiction_id": "CON-003",
+    "expected_sources": ["examination_policy.md#7.1", "academic_regulations.md#5.4"]
+  },
+  {
+    "id": "C10",
+    "question": "Is there a second chance for supplementary exams if my CGPA is above 5.0?",
+    "expected_state": "CONTRADICTION",
+    "expected_contradiction_id": "CON-003",
+    "expected_sources": ["examination_policy.md#7.1", "academic_regulations.md#5.4"]
+  }
+]

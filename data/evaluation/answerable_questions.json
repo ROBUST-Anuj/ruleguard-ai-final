@@ -1,0 +1,107 @@
+[
+  {
+    "id": "A01",
+    "question": "What is the minimum attendance required to sit for semester examinations?",
+    "expected_state": "SUPPORTED",
+    "expected_answer_contains": ["75%"],
+    "expected_sources": ["attendance_policy.md#4.2"]
+  },
+  {
+    "id": "A02",
+    "question": "What is the grading system used at NIT?",
+    "expected_state": "SUPPORTED",
+    "expected_answer_contains": ["10-point", "A+"],
+    "expected_sources": ["academic_regulations.md#4.1"]
+  },
+  {
+    "id": "A03",
+    "question": "What is the maximum grade achievable in a supplementary examination?",
+    "expected_state": "SUPPORTED",
+    "expected_answer_contains": ["D", "6"],
+    "expected_sources": ["examination_policy.md#7.4", "academic_regulations.md#5.3"]
+  },
+  {
+    "id": "A04",
+    "question": "What is the hostel fee for a double occupancy room per semester?",
+    "expected_state": "SUPPORTED",
+    "expected_answer_contains": ["25,000"],
+    "expected_sources": ["hostel_handbook.md#3.1"]
+  },
+  {
+    "id": "A05",
+    "question": "What CGPA is required to maintain a merit scholarship?",
+    "expected_state": "SUPPORTED",
+    "expected_answer_contains": ["8.0"],
+    "expected_sources": ["scholarship_policy.md#3.1"]
+  },
+  {
+    "id": "A06",
+    "question": "What are the quiet hours in the hostel?",
+    "expected_state": "SUPPORTED",
+    "expected_answer_contains": ["10:00 PM", "7:00 AM"],
+    "expected_sources": ["hostel_handbook.md#5.4"]
+  },
+  {
+    "id": "A07",
+    "question": "What is the fee for revaluation of an examination?",
+    "expected_state": "SUPPORTED",
+    "expected_answer_contains": ["500"],
+    "expected_sources": ["examination_policy.md#6.3", "fee_regulations.md#8.1"]
+  },
+  {
+    "id": "A08",
+    "question": "What is the minimum CGPA required for graduation?",
+    "expected_state": "SUPPORTED",
+    "expected_answer_contains": ["5.0"],
+    "expected_sources": ["academic_regulations.md#8.2"]
+  },
+  {
+    "id": "A09",
+    "question": "What are the penalties for ragging at NIT?",
+    "expected_state": "SUPPORTED",
+    "expected_answer_contains": ["suspension", "expulsion"],
+    "expected_sources": ["disciplinary_regulations.md#6.3"]
+  },
+  {
+    "id": "A10",
+    "question": "What is the maximum number of credits a student can register for in a semester?",
+    "expected_state": "SUPPORTED",
+    "expected_answer_contains": ["24"],
+    "expected_sources": ["academic_regulations.md#3.2"]
+  },
+  {
+    "id": "A11",
+    "question": "What is the maximum duration allowed to complete an undergraduate program?",
+    "expected_state": "SUPPORTED",
+    "expected_answer_contains": ["six"],
+    "expected_sources": ["academic_regulations.md#2.2"]
+  },
+  {
+    "id": "A12",
+    "question": "What is the minimum attendance requirement for laboratory courses?",
+    "expected_state": "SUPPORTED",
+    "expected_answer_contains": ["80%"],
+    "expected_sources": ["attendance_policy.md#7.1"]
+  },
+  {
+    "id": "A13",
+    "question": "What is the annual family income limit for a need-based scholarship?",
+    "expected_state": "SUPPORTED",
+    "expected_answer_contains": ["8,00,000", "Eight Lakh"],
+    "expected_sources": ["scholarship_policy.md#3.2"]
+  },
+  {
+    "id": "A14",
+    "question": "What happens if a student arrives more than 30 minutes late to an exam?",
+    "expected_state": "SUPPORTED",
+    "expected_answer_contains": ["not be permitted"],
+    "expected_sources": ["examination_policy.md#5.3"]
+  },
+  {
+    "id": "A15",
+    "question": "What is the late registration fee per day?",
+    "expected_state": "SUPPORTED",
+    "expected_answer_contains": ["500"],
+    "expected_sources": ["academic_regulations.md#3.3"]
+  }
+]
