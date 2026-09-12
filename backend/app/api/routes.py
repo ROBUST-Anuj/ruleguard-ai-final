@@ -8,6 +8,7 @@ from backend.app.ingestion.embeddings import EmbeddingsProvider
 from backend.app.retrieval.semantic import SemanticRetriever
 from backend.app.retrieval.lexical import LexicalRetriever
 from backend.app.retrieval.hybrid import HybridRetriever
+from backend.app.retrieval.tokenizer import tokenize
 from backend.app.reasoning.evidence_analyzer import EvidenceAnalyzer
 from backend.app.reasoning.answer_generator import AnswerGenerator
 from backend.app.reasoning.pipeline import ReasoningPipeline
@@ -70,7 +71,7 @@ def ensure_index_loaded():
                 else:
                     from rank_bm25 import BM25Okapi
                     indexer.chunks = chunks
-                    tokenized = [c.text.lower().split() for c in chunks]
+                    tokenized = [tokenize(c.text) for c in chunks]
                     indexer.bm25 = BM25Okapi(tokenized)
                 return True
     except Exception as e:

@@ -50,6 +50,7 @@ class EvidenceAnalysisResult(BaseModel):
     relevant_evidence: List[Evidence]
     conflicts: Optional[List[Conflict]] = None
     reasoning: str
+    answer: Optional[str] = None
 
 
 class QueryResponse(BaseModel):

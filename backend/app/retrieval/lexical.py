@@ -1,6 +1,7 @@
 from typing import List, Tuple
 from backend.app.ingestion.indexer import Indexer
 from backend.app.models.schemas import Chunk
+from backend.app.retrieval.tokenizer import tokenize
 
 class LexicalRetriever:
     def __init__(self, indexer: Indexer):
@@ -10,7 +11,7 @@ class LexicalRetriever:
         if not self.indexer.bm25 or not self.indexer.chunks:
             return []
             
-        tokenized_query = query.lower().split()
+        tokenized_query = tokenize(query)
         scores = self.indexer.bm25.get_scores(tokenized_query)
         
         top_n = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[:top_k]

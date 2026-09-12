@@ -4,6 +4,7 @@ import numpy as np
 from typing import List, Optional, Tuple
 from backend.app.models.schemas import Chunk
 from rank_bm25 import BM25Okapi
+from backend.app.retrieval.tokenizer import tokenize
 
 try:
     import faiss
@@ -72,7 +73,7 @@ class Indexer:
         else:
             self.vector_index = NumpyVectorIndex(self.embeddings)
 
-        tokenized_corpus = [chunk.text.lower().split() for chunk in chunks]
+        tokenized_corpus = [tokenize(chunk.text) for chunk in chunks]
         self.bm25 = BM25Okapi(tokenized_corpus)
 
         self.save()

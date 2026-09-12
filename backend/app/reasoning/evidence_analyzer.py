@@ -15,6 +15,7 @@ class EvidenceAnalyzer:
         self.client = OpenAI(
             api_key=settings.LLM_API_KEY,
             base_url=settings.LLM_BASE_URL,
+            default_headers={"Accept-Encoding": "gzip, deflate"},
         )
         self.model = settings.LLM_MODEL
 
@@ -54,6 +55,7 @@ class EvidenceAnalyzer:
             "Return ONLY valid JSON with this exact structure:\n"
             "{\n"
             '  "state": "SUPPORTED" | "NOT_FOUND" | "CONTRADICTION",\n'
+            '  "answer": "If state is SUPPORTED, write a clear, accurate, complete answer citing sources with [1], [2] matching evidence numbers. If NOT_FOUND or CONTRADICTION, set to empty string.",\n'
             '  "relevant_evidence_indices": [1, 3],\n'
             '  "reasoning": "Explain your decision based on the evidence",\n'
             '  "conflicts": [\n'
@@ -158,4 +160,5 @@ class EvidenceAnalyzer:
             relevant_evidence=relevant_evidence,
             conflicts=conflicts,
             reasoning=result.get("reasoning", ""),
+            answer=result.get("answer"),
         )

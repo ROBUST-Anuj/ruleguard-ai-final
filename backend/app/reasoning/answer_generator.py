@@ -14,6 +14,7 @@ class AnswerGenerator:
         self.client = OpenAI(
             api_key=settings.LLM_API_KEY,
             base_url=settings.LLM_BASE_URL,
+            default_headers={"Accept-Encoding": "gzip, deflate"},
         )
         self.model = settings.LLM_MODEL
 
@@ -119,6 +120,26 @@ class AnswerGenerator:
                 section=ev.section,
                 page=ev.page,
             ))
+
+        # If analysis already produced a grounded answer, format citations directly
+        if analysis.answer and analysis.answer.strip():
+            import re
+            answer = analysis.answer
+            # Replace [1], 【1】, etc. with [SRC-001]
+            def _cite_repl(m):
+                idx = int(m.group(1))
+                if 1 <= idx <= len(analysis.relevant_evidence):
+                    return f"[SRC-{idx:03d}]"
+                return m.group(0)
+            answer = re.sub(r'[\[【](\d+)[\]】]', _cite_repl, answer)
+            return QueryResponse(
+                state="SUPPORTED",
+                answer=answer,
+                evidence=analysis.relevant_evidence,
+                citations=citations,
+                conflicts=None,
+                reasoning=analysis.reasoning,
+            )
 
         system_prompt = (
             "You are a university regulations assistant. Answer the user's question "

@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     EMBEDDING_MODEL: str = "text-embedding-3-small"
     SEMANTIC_WEIGHT: float = 0.65
     LEXICAL_WEIGHT: float = 0.35
-    TOP_K: int = 10
+    TOP_K: int = 8
     DATA_DIR: str = "data"
     INDEX_DIR: str = "data/index"
 
